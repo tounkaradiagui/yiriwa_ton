@@ -1,0 +1,14 @@
+body{
+    height: 400px;
+}
+
+.boutonsdpl{
+    position: relative;
+    right: 10px;
+}
+
+.i-name{
+    position: relative;
+    bottom: 600px;
+    left: 50px;
+}

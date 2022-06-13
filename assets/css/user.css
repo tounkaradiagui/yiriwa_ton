@@ -1,0 +1,90 @@
+body {
+    height: 770px;
+}
+.row {
+    margin-top: 100px;
+    margin-left: 60px;
+}
+h2 {
+    position: relative;
+    bottom: 650px;
+    left: 300px;
+}
+.user {
+    font-size: 30px;
+    background-color: #f79423;
+    padding: 40px 10px;
+    color: #fff;
+}
+.container .btn:hover {
+    color: white;
+}
+.fa-clock-rotate-left {
+    position: relative;
+    top: -28px;
+    left: 20px;
+}
+.hist {
+    font-size: 30px;
+    background-color: #f79423;
+    padding: 40px 5px;
+    color: #fff;
+}
+.fa-solid {
+    margin-right: 0px;
+    margin-right: 12px;
+    font-size: 40px;
+}
+.bar {
+    
+    font-size: 30px;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    position: relative;
+    left: 340px;
+    bottom: 560px;
+}
+.side i {
+    color: black;
+    padding-top: 100px 2px;
+}
+.side a {
+    color: black;
+}
+.profil {
+    position: relative;
+    top: 80px;
+    right: 10px;
+    bottom: 100px;
+    left: 50px;
+}
+.para {
+    position: relative;
+    top: 150px;
+    right: 10px;
+    bottom: 50px;
+    left: 10px;
+}
+.line {
+    padding-left: 1px;
+    padding-right: 20px;
+}
+.fa-user {
+   
+    margin-left: 20px;
+}
+span {
+    font-size: 60px;
+    color: #159247;
+}
+.fin {
+    position: relative;
+    top: 280px;
+    left: 25px;
+    background-color: #0E4C92;
+    color: #fff;
+    border-radius: 10px;
+}

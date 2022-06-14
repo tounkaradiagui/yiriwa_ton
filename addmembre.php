@@ -1,35 +1,34 @@
 
 
 <?php
-
-    if($_SERVER['REQUEST_METHOD'] == 'POST')
+    include "connect.php";
+    if(isset($_POST['savedata']))
     
-    {
-
-   
-      include "connect.php";
-   
+        $code_mb = $_POST['code_mb'];
         $sexe = $_POST['sexe'];
         $nom = $_POST['nom'];
         $prenom = $_POST['prenom'];
         $numero = $_POST['numero'];
         $adresse = $_POST['adresse'];
-        $username = $_POST['username'];
+        $role = $_POST['role'];
+        $login = $_POST['login'];
         $password = $_POST['password'];
 
-        $query = "INSERT INTO cotisation (Mode_de_paiement, Numéro, Montant) VALUES ('$mode', '$numero', '$montant')";
-        $result=mysqli_query($con, $query);
-        
-        if($result)
+
+        try {
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            $query = "INSERT INTO membres (code_mb,civilite,nom,prenom,numero,adresse,role,login,password) 
+            VALUES ('$code_mb','$sexe', '$nom', '$prenom',  '$numero', '$adresse', '$role', '$login', '$password')";
+            $conn->exec($query);
             
-        {
-            echo "membre ajouté";
-        }
-        else
-        {
-            die(mysqli_error($conn));
-        }
-
-    }
-
+            echo "Votre enregistrement a été pris en compte";
+          }
+          
+        catch (PDOException $e) {
+            echo $query . "<br>" . $e->getMessage();
+          }
+          
+          $conn = null;
+       
 ?>

@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+include "connect.php";
+
+if(isset($_SESSION['username']) && isset($_SESSION['id']))
+
+{ ?>
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,6 +26,11 @@
     <nav class="navbar" style="background-color: #0E4C92">
         <img src="assets/images/logo.png" alt="" width="100px"; height="80px">
     </nav>
+
+    <?php  if($_SESSION['role'] == 'admin')
+            
+            {?>
+
     <div class="side" style="background-color: #d9d9d9; width: 200px; height: 690px">
         <div class="profil">
             <h5>
@@ -33,6 +50,9 @@
         </div>
         <button class="btn fin btn-light" type="button"><a href=""></a>Déconnexion</button>
     </div>
+
+    <?php } ?>
+   
     <h2>Bonjour User, Bienvenue sur Yiriwa-Ton</h2>
     <div class="container">
         <div class="row">
@@ -57,6 +77,9 @@
 
   </body>
 </html>
+<?php }else{
+    header("Location: home.php");
+}
 
 
 

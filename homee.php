@@ -1,4 +1,32 @@
+<?php
 
+session_start();
+
+include "connect.php";
+
+if(isset($_SESSION['username']) && isset($_SESSION['id']))
+
+{ ?>
+
+
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css"/>
+    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+  </head>
+
+    <body style="background-color: #fff;">
+        <div class="container text-center" d-flex justify-content-center align-items-center style="min-height: 100vh; ">
+            
+            <?php  if($_SESSION['role'] == 'admin')
+            
+            {?>
+            <!-- for Admin -->
+
+            
 
 
 
@@ -95,5 +123,63 @@
 
         <script src="assets/bootstrap/css/bootstrap.min.css"></script>
 
+
+                <div class="p-3">
+
+                <?php include 'members.php';
+                
+                if(mysqli_num_rows($res) > 0)
+                
+                {?>
+ 
+                    <h1 class="display-4 fs-1" >Members</h1>
+
+                    <table class="table table-dark table-striped text-center" style="width: 32rem;">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Role</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <?php $i =1; while ($rows = mysqli_fetch_assoc($res))
+                            {
+                            ?>
+                          
+                            <tr>
+                                <td><?=$i?></td>
+                                <td><?=$rows['name']?></td>
+                                <td><?=$rows['username']?></td>
+                                <td><?=$rows['role']?></td>
+                            </tr>
+                            <?php $i++; }?>
+                        </tbody>
+                    </table>
+
+                    <?php }?>
+
+                </div>
+                
+            <?php }else{ ?>
+               <!-- For  user -->
+               <div class="card" style="width: 28rem;">
+
+                    <img src="imag/user.png" class="card-img-top" alt="admin image" width="100" height="100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><?=$_SESSION['name']?> </h5>
+                        
+                        <a href="logout.php" class="btn btn-dark">Logout</a>
+                    </div>
+                </div>
+
+            <?php } ?>
+        </div>
+    
     </body>
 </html>
+<?php }else{
+    header("Location: home.php");
+}

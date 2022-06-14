@@ -1,40 +1,10 @@
 <?php
 
-    if($_SERVER['REQUEST_METHOD'] == 'POST')
-    
-    {
+session_start();
 
-   
-        include 'connect.php'; 
-
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-
-
-        $sql="SELECT * FROM membres WHERE username='$username' AND password=$password";
-        $result=mysqli_query($con, $sql);
-        
-        if($result){
-            $num=mysqli_num_rows($result);
-            if($num>0){
-                echo "Login successful ";
-                session_start();
-                $_SESSION['username']=$username;
-                header('location:admin.php');
-            }
-            else
-            {
-               echo "Invalid data";
-           
-            }
-        }
-
-    }
+if(!isset($_SESSION['username']) && !isset($_SESSION['id']))
 
 ?>
-
-
-
 
 
 <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
@@ -59,10 +29,16 @@
                             <div class="form-group mb-3">
                                 <label for="">Mot de passe</label>
                                 <input type="password" name="password" id="" class="form-control">
+                            </div><br>
+                            <div class="form-group mb-3">
+                                <select name="role" id="" class="form-select mb-3 box-input" aria-label="Default select example">
+                                    <option selected value="user">User</option>
+                                    <option value="admin">Admin</option>
+                                </select>
                             </div>
                            
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Connexion</button>
+                                <button type="submit" class="btn btn-primary" name="submit">Connexion</button>
                             </div>
                         </form>
 

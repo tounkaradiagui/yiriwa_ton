@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -7,12 +9,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="assets/img/logo.png" rel="icon">
   <!-- ton CSS Files -->
-  <link href="assets/ton/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/ton/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/ton/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
-  <link href="assets/ton/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/ton/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/home.css" rel="stylesheet">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -31,7 +33,7 @@
           <h5 class="modal-title" id="exampleModalLabel">Contact</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form method="POST" action="liaison.php">
+        <form method="POST" action="">
         <div class="modal-body">
           <legend>Veuiller remplir les champs</legend>
           <div class="row">
@@ -79,6 +81,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="dashbord.php" class="">Dashbord</a></li>
           <li><a href="apropos.html">A propos</a></li>
           <li><a href="#" data-bs-toggle="modal" data-bs-target="#contact">Contact</a></li>
         </ul>
@@ -93,7 +96,7 @@
     <div class="carousel-inner" role="listbox">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url(assets/img/slide/1.jpeg);">
+        <div class="carousel-item active" style="background-image: url(assets/images/slide/1.jpeg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h4>Bienvenue sur Yiriwa-Ton</h4>
@@ -104,7 +107,7 @@
         </div>
 
         <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url(assets/img/slide/2.jpeg);">
+        <div class="carousel-item" style="background-image: url(assets/images/slide/2.jpeg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h4>Bienvenue sur Yiriwa-Ton</h4>
@@ -115,7 +118,7 @@
         </div>
 
         <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url(assets/img/slide/3.jpeg);">
+        <div class="carousel-item" style="background-image: url(assets/images/slide/3.jpeg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h4>Bienvenue sur Yiriwa-ton</h4>

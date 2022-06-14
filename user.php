@@ -37,10 +37,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <button type="button" class="btn user btn-lg"><i class="fa-solid fa-hand-holding-dollar"></i>Cotisation</button>
+                <a href="cotisation.php"><button type="button" class="btn user btn-lg"><i class="fa-solid fa-hand-holding-dollar"></i>Cotisation</button></a>
             </div>
             <div class="col-md-4">
-                <a href="home.html"><button type="button" class="btn user btn-lg"><i class="fa-solid fa-circle-info"></i>Actualités</button></a>
+                <a href="home.php"><button type="button" class="btn user btn-lg"><i class="fa-solid fa-circle-info"></i>Actualités</button></a>
             </div>
         </div>
         <div class="row">

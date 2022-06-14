@@ -1,0 +1,14 @@
+body{
+    height: 100px;
+}
+.sect{
+    position:relative;
+    left: 175px;
+    width: fit-content;
+    bottom:400px ;
+}
+h1{
+    position: relative;
+    right: 500px; 
+    color: white;
+}

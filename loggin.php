@@ -1,11 +1,12 @@
 <?php
-session_start();
+
+    session_start();
     require_once 'connect.php';
     $connection = mysqli_connect("localhost", "root", "");
     $db = mysqli_select_db($connection, 'yiriwaton');
 
 
-    if($_SERVER['REQUEST_METHOD'] == "POST")
+    if($_POST['REQUEST_METHODE'] == "POST")
     {
         $user = $_POST["username"];
         $password = $_POST["password"];
@@ -14,7 +15,6 @@ session_start();
 
         $sql ="SELECT login, password, role FROM membres WHERE login='".$user."' AND role = '".$role."' AND password = '".$password."' ";
         $result = mysqli_query($connection, $sql);
-        $row = mysqli_fetch_array($result);
 
         $_SESSION['login'] = $user;
         if($row["role"] == "admin")

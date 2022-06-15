@@ -1,5 +1,10 @@
 
+<?php
 
+session_start();
+include "connect.php";
+
+?>
 
 
 <!DOCTYPE html>
@@ -56,7 +61,7 @@
                     
                 </div>
                 <!-- <a class="nav-link" href="logout.php">Log out</a> -->
-            <a type="submit" class="btn btn-primary pied" href="login.php" >Déconnexion</a>
+            <a type="submit" class="btn btn-primary pied" href="logout.php" >Déconnexion</a>
 
             
                 

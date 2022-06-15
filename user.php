@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+include "connect.php";
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,7 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="assets/ton/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/user.css">
-    <title>User</title>
+    <title>
+    <?php if (isset($page_title)){ echo "$page_title"; } ?> Dashbord de user
+    </title>
   </head>
   <body>
   <div class="modal fade" id="rejoindre" tabindex="-1" role="dialog" aria-labelledby="form" aria-hidden="true">
@@ -67,9 +76,10 @@
                 <a href="#">Paramèttres</a>
             </h5>
         </div>
-        <button class="btn fin btn-light" type="button"><a href=""></a>Déconnexion</button>
+        <button class="btn fin btn-light" type="button"><a href="logout.php"></a>Déconnexion</button>
     </div>
     <h2>Bonjour User, Bienvenue sur Yiriwa-Ton</h2>
+
     <div class="container">
         <div class="row">
             <div class="col-md-4">

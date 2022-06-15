@@ -14,7 +14,7 @@
         $montant = $_POST['montant'];
 
         $query = "INSERT INTO cotisation (Mode_de_paiement, Numéro, Montant) VALUES ('$mode', '$numero', '$montant')";
-        $result=mysqli_query($con, $query);
+        $result=mysqli_query($conn, $query);
         
         
         if($result)
@@ -24,7 +24,7 @@
         }
         else
         {
-            die(mysqli_error($conn));
+            die(mysqli_error($con));
         }
 
 //         $sql="SELECT * FROM registration WHERE username='$username'";
@@ -70,8 +70,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="css/cotisation.css">
-        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/cotisation.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 
         <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
         

@@ -28,7 +28,14 @@ session_start();
         }
 
         else{
+            session_start();
+
             $message = "login or password incorrect";
+
+            
+            $_SESSION['loginMessage'] = $message;
+
+            header("location:login.php");
         }
 
     }
@@ -66,6 +73,13 @@ session_start();
                         <div class="card shadow">
                             <div class="card-header" style="background-color: #F79423;">
                                 <h5>Renseignez les champs pour vous connecter</h5>
+                                <h6>
+                                    <?php 
+                                    // session_start();
+                                    //     echo $_SESSION['loginMessage'];
+
+                                    ?>
+                                </h6>
                             </div>
                             <div class="card-body">
         

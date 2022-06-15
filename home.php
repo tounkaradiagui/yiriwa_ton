@@ -157,7 +157,7 @@
   </footer>
 
   <!-- ton JS Files -->
-  <script src="assets/ton/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 

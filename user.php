@@ -91,9 +91,9 @@ include "connect.php";
             <div class="col-md-4">
                 <button type="button" class="btn user btn-lg" data-bs-toggle="modal" data-bs-target="#rejoindre"><i class="fa-solid fa-users-between-lines"></i>Webinaire</button>
             </div>
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
                 <a href=""><button type="button" class="btn hist btn-lg"><i class="fa fa-clock-rotate-left"><br></i><i class="fa-solid fa-list"></i>Historique</button></a>
-            </div>
+            </div> -->
         </div>
     </div>
 

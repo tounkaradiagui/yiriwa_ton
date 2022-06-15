@@ -1,8 +1,8 @@
 <?php
     $servername = "localhost";
     $username = "root";
-    $password = "root";
-    $dbname = "yiriwa_ton";
+    $password = "";
+    $dbname = "yiriwaton";
 
     $nom=$_POST["nom"];
     $prenom=$_POST["prenom"];

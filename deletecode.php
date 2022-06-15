@@ -5,14 +5,14 @@
         if (isset($_POST['deletedata']))
 
 
-        $id = $_POST['code_mb'];
+        $id = $_POST['deleteid'];
 
 
         try {
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             $query = "DELETE FROM membres WHERE code_mb='$id'";
-            $conn->exec($query);
+            $connection->exec($query);
             
             echo "Le membre a été supprimé de la liste";
           }
@@ -21,6 +21,6 @@
             echo $query . "<br>" . $e->getMessage();
           }
           
-          $conn = null;
+          $connection = null;
 
 ?>

@@ -191,7 +191,7 @@
                                 <td>Orange Money</td>
                             </tr>
                             <tr>
-                                <td>0329</th>
+                                <td>0329</td>
                                 <td>105000</td>
                                 <td>01/01/2022</td>
                                 <td>Orange Money</td>

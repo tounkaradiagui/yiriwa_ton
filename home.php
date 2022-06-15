@@ -77,7 +77,7 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-      <a href="index.html" class="logo me-auto me-lg-10"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+      <a href="index.html" class="logo me-auto me-lg-10"><img src="assets/images/Logo.png" alt="" class="img-fluid"></a>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a href="index.html" class="active">Accueil</a></li>

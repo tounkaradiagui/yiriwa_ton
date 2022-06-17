@@ -208,7 +208,7 @@
                     <section style="display: flex;">
                         <img src="assets/images/OrangeMoney.jpg" alt="" srcset="" width="200px" height="90px">
                         <img src="assets/images/movv.png" alt="" srcset="" width="200px" height="100px">
-                        <img src="asset/simages/wave.png" alt="" srcset="" width="200px" height="90px">
+                        <img src="assets/simages/wave.png" alt="" srcset="" width="200px" height="90px">
                         <img src="assets/images/sama.jpg" alt="" srcset="" width="200px" height="90px">
                     </section>
                 </div>

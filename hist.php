@@ -202,7 +202,7 @@
 
             <nav class="navbar" >
 
-                <img src="assets/img/logo.png" width="100" height="90" alt="">
+                <img src="assets/images/logo.png" width="100" height="90" alt="">
                 <h1 style="color: #fff;">Yiriwa Ton</h1>
                 <button class="btn boutonsdpl" data-bs-toggle="modal" data-bs-target="#ajouter" style="background-color: #f79423; color: #fff;">Ajouter</button>
     
@@ -228,7 +228,7 @@
 
                 <?php
 
-                    $connection = mysqli_connect("localhost", "root", "root");
+                    $connection = mysqli_connect("localhost", "root", "");
                     $db = mysqli_select_db($connection, 'yiriwaton');
 
                     $query = "SELECT * FROM historique";

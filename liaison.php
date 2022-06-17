@@ -1,30 +1,27 @@
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "yiriwaton";
 
-    $nom=$_POST["nom"];
-    $prenom=$_POST["prenom"];
-    $telephone=$_POST["telephone"];
-    $objet=$_POST["objet"];
-    $message=$_POST["message"];
+$connection = mysqli_connect("localhost","root","");
+$db = mysqli_select_db($connection, 'yiriwaton');
 
-    try {
+if(isset($_POST['envoyer']))
+{
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $telephone = $_POST['telephone'];
+    $objet = $_POST['objet'];
+    $message = $_POST['message'];
 
+    $query = "INSERT INTO contact(`nom`,`prenom`,`telephone`, `objet`, `message`) VALUES ('$nom','$prenom','$telephone','$objet','$message')";
+    $query_run = mysqli_query($connection, $query);
 
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "INSERT INTO notification (nom, prenom, telephone, objet, message)
-    VALUES ('$nom', '$prenom', '$telephone', '$objet', '$message')";
-    // use exec() because no results are returned
-    $conn->exec($sql);
-    echo "Message envoyé";
-    header('Location: home.php');
-  } catch(PDOException $e) {
-    echo $sql . "<br>" . $e->getMessage();
-  }
-  
+    if($query_run)
+    {
+        echo '<script> alert("Message envoyé"); </script>';
+    }
+    else
+    {
+        echo '<script> alert("Erreur, message non envoyé"); </script>';
+    }
+}
 
 ?>

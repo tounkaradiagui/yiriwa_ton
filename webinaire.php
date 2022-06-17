@@ -172,7 +172,7 @@
 
             <nav class="navbar" >
 
-                <img src="images/Logo.png" width="100" height="90" alt="">
+                <img src="asset/images/logo.png" width="100" height="80" alt="">
     
             </nav>
             
@@ -180,7 +180,7 @@
 
         
 
-        <div class="side" style="background-color: #f79423; width: 100px; height: 600px;">
+        <div class="side" style="background-color: #f79423; width: 100px; height: 690px;">
 
            
 

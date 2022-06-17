@@ -1,8 +1,9 @@
-
-
 <?php
+<<<<<<< HEAD
 
    
+=======
+>>>>>>> 17dbc5ba943871263574d751b627960c4e6d1ae6
         include 'connect.php'; 
 
         $mode = $_POST['mode'];
@@ -10,13 +11,28 @@
         $montant = $_POST['montant'];
     try{
 
+<<<<<<< HEAD
     
         $query = "INSERT INTO cotisation (Mode_de_paiement, Numéro, Montant) VALUES ('$mode', '$numero', '$montant')";
         $connection->exec($query);
         
          echo "Connected successfully";
+=======
+    try {
+        $query = "INSERT INTO cotisation (Mode_de_paiement, Numéro, Montant) VALUES ('$mode', '$numero', '$montant')";
+        $connection->exec($query);
+        echo "Paiement effectué";
+        }
+        catch (PDOException $e)
+
+        {
+          echo "Connection failed: " . $e->getMessage();
+        }
+      
+>>>>>>> 17dbc5ba943871263574d751b627960c4e6d1ae6
 
 
+<<<<<<< HEAD
        } 
     
     catch (PDOException $e)
@@ -25,6 +41,31 @@
       echo "Connection failed: " . $e->getMessage();
     }
   
+=======
+//                 // $user=1;
+//             }
+//             else
+//             {
+//                 $sql="INSERT INTO cotisation (username, password) VALUES ('$username', '$password')";
+
+//                 $result=mysqli_query($con, $sql);
+
+//                 if($result)
+            
+//             {
+//                 echo "signup  successfully";
+//                 // $user=1;
+
+//                 header('location:cotisation.php');
+//             }
+//             else
+//             {
+//                 die(mysqli_error($con));
+//             }
+//             }
+//         }
+    
+>>>>>>> 17dbc5ba943871263574d751b627960c4e6d1ae6
 
 ?>
 
@@ -38,7 +79,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="assets/css/cotisation.css">
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
         
@@ -185,15 +226,26 @@
                     <section style="display: flex;">
                         <img src="assets/images/OrangeMoney.jpg" alt="" srcset="" width="200px" height="90px">
                         <img src="assets/images/movv.png" alt="" srcset="" width="200px" height="100px">
+<<<<<<< HEAD
                         <img src="assets/images/wave.png" alt="" srcset="" width="200px" height="90px">
+=======
+                        <img src="assets/simages/wave.png" alt="" srcset="" width="200px" height="90px">
+>>>>>>> 17dbc5ba943871263574d751b627960c4e6d1ae6
                         <img src="assets/images/sama.jpg" alt="" srcset="" width="200px" height="90px">
                     </section>
                 </div>
             </div>
         </div>
 
+<<<<<<< HEAD
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         
+=======
+        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/dataTables.dataTables.min.js"></script>
+
+>>>>>>> 17dbc5ba943871263574d751b627960c4e6d1ae6
                 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

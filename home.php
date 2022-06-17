@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -12,11 +10,9 @@
   <link href="assets/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-
   <link href="assets/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/home.css" rel="stylesheet">
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -33,7 +29,7 @@
           <h5 class="modal-title" id="exampleModalLabel">Contact</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form method="POST" action="">
+        <form method="POST" action="liaison.php">
         <div class="modal-body">
           <legend>Veuiller remplir les champs</legend>
           <div class="row">
@@ -41,7 +37,7 @@
               <label>Nom</label>
             </div>
             <div class="col">
-              <input type="text" name="nom" required>
+              <input type="text" name="nom" required="">
             </div>
           </div><br>
           <div class="row">
@@ -77,13 +73,12 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-      <a href="index.html" class="logo me-auto me-lg-10"><img src="assets/images/Logo.png" alt="" class="img-fluid"></a>
+      <a href="index.html" class="logo me-auto me-lg-10"><img src="assets/images/logo.png" alt="" class="img-fluid"></a>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a href="index.html" class="active">Accueil</a></li>
-          <li><a href="dashbord.php" class="">Dashbord</a></li>
-          <li><a href="apropos.html">A propos</a></li>
-          <li><a href="#" data-bs-toggle="modal" data-bs-target="#contact">Contact</a></li>
+          <li><a href="home.php" class="active">Accueil</a></li>
+          <li><a href="apropos.php">A propos</a></li>
+          <li><a href="#" data-bs-toggle="modal" data-bs-target="#contact"> Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -157,7 +152,7 @@
   </footer>
 
   <!-- ton JS Files -->
-  <script src="assets/ton/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 

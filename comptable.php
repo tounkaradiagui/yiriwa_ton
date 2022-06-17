@@ -115,9 +115,10 @@
 
         <section class="i-name" style="display: flex;">
 
-            <button type="submit" class="btn btn-warning " style="width: 210px;" > <i class="bi bi-list-check"></i> Historique</button>
-          
         </section>
+        
+
+        
         <script src="assets/bootstrap/bootstrap.min.js"></script>
 
     </body>

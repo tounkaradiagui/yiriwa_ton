@@ -5,7 +5,7 @@
         if (isset($_POST['deletedata']))
 
 
-        $id = $_POST['deleteid'];
+        $id = $_POST['delete_id'];
 
 
         try {

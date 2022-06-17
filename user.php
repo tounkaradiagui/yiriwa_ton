@@ -55,7 +55,7 @@ include "connect.php";
         </div>
 
     <nav class="navbar" style="background-color: #0E4C92">
-        <img src="assets/images/Logo.png" alt="" width="100px"; height="80px">
+        <img src="assets/images/logo.png" alt="" width="100px"; height="80px">
     </nav>
     <div class="side" style="background-color: #d9d9d9; width: 200px; height: 690px">
         <div class="profil">

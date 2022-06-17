@@ -1,31 +1,21 @@
-
-
 <?php
-
-    if($_SERVER['REQUEST_METHOD'] == 'POST')
-    
-    {
-
-   
         include 'connect.php'; 
 
         $mode = $_POST['mode'];
         $numero = $_POST['numero'];
         $montant = $_POST['montant'];
 
+    try {
         $query = "INSERT INTO cotisation (Mode_de_paiement, Numéro, Montant) VALUES ('$mode', '$numero', '$montant')";
-        $result=mysqli_query($conn, $query);
-        
-        
-        if($result)
-            
-        {
-            echo "Paiement effectué";
+        $connection->exec($query);
+        echo "Paiement effectué";
         }
-        else
+        catch (PDOException $e)
+
         {
-            die(mysqli_error($con));
+          echo "Connection failed: " . $e->getMessage();
         }
+      
 
 //         $sql="SELECT * FROM registration WHERE username='$username'";
 //         $result=mysqli_query($con, $sql);
@@ -57,7 +47,7 @@
 //             }
 //             }
 //         }
-    }
+    
 
 ?>
 
@@ -71,7 +61,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="assets/css/cotisation.css">
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
         
@@ -142,7 +132,7 @@
 
             <nav class="navbar" >
 
-                <img src="images/Logo.png" width="100" height="90" alt="">
+                <img src="assets/images/logo.png" width="100" height="90" alt="">
                 <h1 style="color: #fff;">Yiriwa Ton</h1>
                 <button type="submit" class="btn droite" data-bs-toggle="modal" data-bs-target="#cotiser"  style="background-color: #f79423; color: #fff;">Cotiser</button>
 
@@ -204,7 +194,7 @@
 
                 <div class="col-md-4">
                     <section id="warrri">
-                        <img src="images/wari.jpg" alt="" srcset="" width="400px" height="400px">
+                        <img src="assets/images/wari.jpg" alt="" srcset="" width="400px" height="400px">
                     </section>
                 </div>
                 
@@ -216,16 +206,16 @@
             <div class="row last">
                 <div class="col">
                     <section style="display: flex;">
-                        <img src="images/OrangeMoney.jpg" alt="" srcset="" width="200px" height="90px">
-                        <img src="images/movv.png" alt="" srcset="" width="200px" height="100px">
-                        <img src="images/wave.png" alt="" srcset="" width="200px" height="90px">
-                        <img src="images/sama.jpg" alt="" srcset="" width="200px" height="90px">
+                        <img src="assets/images/OrangeMoney.jpg" alt="" srcset="" width="200px" height="90px">
+                        <img src="assets/images/movv.png" alt="" srcset="" width="200px" height="100px">
+                        <img src="asset/simages/wave.png" alt="" srcset="" width="200px" height="90px">
+                        <img src="assets/images/sama.jpg" alt="" srcset="" width="200px" height="90px">
                     </section>
                 </div>
             </div>
         </div>
 
-        <script src="bootstrap/bootstrap.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.12.1/js/dataTables.dataTables.min.js"></script>
 

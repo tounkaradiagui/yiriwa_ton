@@ -1,27 +1,29 @@
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "root";
-    $dbname = "yiriwaton";
 
-    $nom=$_POST["nom"];
-    $prenom=$_POST["prenom"];
-    $telephone=$_POST["telephone"];
-    
-    try {
+$connection = mysqli_connect("localhost","root","");
+$db = mysqli_select_db($connection, 'yiriwaton');
 
+if(isset($_POST['envoyer']))
+{
+  $code_membre=$_POST["code_membre"];
+  $nom=$_POST["nom"];
+  $prenom=$_POST["prenom"];
+  $telephone=$_POST["telephone"];
+  $adresse=$_POST["adresse"];
+  $mode_de_paiement=$_POST["mode_de_paiement"];
+  $montant=$_POST["montant"];
 
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "INSERT INTO historique (nom, prenom, telephone)
-    VALUES ('$nom', '$prenom', '$telephone')";
-    // use exec() because no results are returned
-    $conn->exec($sql);
-    echo "Message envoyé";
-  } catch(PDOException $e) {
-    echo $sql . "<br>" . $e->getMessage();
-  }
-  
+    $query = "INSERT INTO historique (code_membre, nom, prenom, telephone, adresse, mode_de_paiement, montant) VALUES ('$code_membre', '$nom', '$prenom', '$telephone', '$adresse', '$mode_de_paiement', '$montant')";
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+        echo '<script> alert("Paiement ajouté"); </script>';
+    }
+    else
+    {
+        echo '<script> alert("Erreur, paiement non ajouté"); </script>';
+    }
+}
 
 ?>

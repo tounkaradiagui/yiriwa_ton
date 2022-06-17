@@ -239,7 +239,7 @@
 
             <nav class="navbar" >
 
-                <img src="images/Logo.png" width="100" height="90" alt="">
+                <img src="assets/images/logo.png" width="100" height="90" alt="">
                 <h1 style="color: #fff;">Yiriwa Ton</h1>
                 <button class="btn boutonsdpl" data-bs-toggle="modal" data-bs-target="#ajouter" style="background-color: #f79423; color: #fff;">Ajouter</button>
     
@@ -247,7 +247,7 @@
 
         </div>
 
-        <div class="side" style="background-color: #f79423; width: 100px; height: 600px;">
+        <div class="side" style="background-color: #f79423; width: 100px; height: 683px;">
 
            
 
@@ -265,7 +265,7 @@
 
                 <?php
 
-                    $connection = mysqli_connect("localhost", "root", "");
+                    $connection = mysqli_connect("localhost", "root", "root");
                     $db = mysqli_select_db($connection, 'yiriwaton');
 
                     $query = "SELECT * FROM membres";

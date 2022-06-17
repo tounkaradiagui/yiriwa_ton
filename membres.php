@@ -239,7 +239,15 @@
 
             <nav class="navbar" >
 
+<<<<<<< HEAD
                 <img src="assets/images/Logo.png" width="100" height="90" alt="">
+=======
+<<<<<<< HEAD
+                <img src="assets/images/logo.png" width="100" height="90" alt="">
+=======
+                <img src="assets/images/Logo.png" width="100" height="90" alt="">
+>>>>>>> 83dc7adc94ef24d1e05035d0f605873b268bd085
+>>>>>>> 4927c5d255cb0965a22230d2c0311a814295f1be
                 <h1 style="color: #fff;">Yiriwa Ton</h1>
                 <button class="btn boutonsdpl" data-bs-toggle="modal" data-bs-target="#ajouter" style="background-color: #f79423; color: #fff;">Ajouter</button>
     

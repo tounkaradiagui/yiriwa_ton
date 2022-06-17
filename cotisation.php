@@ -1,9 +1,16 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
    
 =======
 >>>>>>> 17dbc5ba943871263574d751b627960c4e6d1ae6
+=======
+=======
+
+   
+>>>>>>> 83dc7adc94ef24d1e05035d0f605873b268bd085
+>>>>>>> 4927c5d255cb0965a22230d2c0311a814295f1be
         include 'connect.php'; 
 
         $mode = $_POST['mode'];
@@ -12,12 +19,15 @@
     try{
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     
         $query = "INSERT INTO cotisation (Mode_de_paiement, Numéro, Montant) VALUES ('$mode', '$numero', '$montant')";
         $connection->exec($query);
         
          echo "Connected successfully";
 =======
+=======
+>>>>>>> 4927c5d255cb0965a22230d2c0311a814295f1be
     try {
         $query = "INSERT INTO cotisation (Mode_de_paiement, Numéro, Montant) VALUES ('$mode', '$numero', '$montant')";
         $connection->exec($query);
@@ -29,6 +39,7 @@
           echo "Connection failed: " . $e->getMessage();
         }
       
+<<<<<<< HEAD
 >>>>>>> 17dbc5ba943871263574d751b627960c4e6d1ae6
 
 
@@ -42,6 +53,18 @@
     }
   
 =======
+=======
+=======
+    
+        $query = "INSERT INTO cotisation (Mode_de_paiement, Numéro, Montant) VALUES ('$mode', '$numero', '$montant')";
+        $connection->exec($query);
+        
+         echo "Connected successfully";
+>>>>>>> 83dc7adc94ef24d1e05035d0f605873b268bd085
+
+
+<<<<<<< HEAD
+>>>>>>> 4927c5d255cb0965a22230d2c0311a814295f1be
 //                 // $user=1;
 //             }
 //             else
@@ -65,7 +88,20 @@
 //             }
 //         }
     
+<<<<<<< HEAD
 >>>>>>> 17dbc5ba943871263574d751b627960c4e6d1ae6
+=======
+=======
+       } 
+    
+    catch (PDOException $e)
+  
+    {
+      echo "Connection failed: " . $e->getMessage();
+    }
+  
+>>>>>>> 83dc7adc94ef24d1e05035d0f605873b268bd085
+>>>>>>> 4927c5d255cb0965a22230d2c0311a814295f1be
 
 ?>
 
@@ -227,10 +263,17 @@
                         <img src="assets/images/OrangeMoney.jpg" alt="" srcset="" width="200px" height="90px">
                         <img src="assets/images/movv.png" alt="" srcset="" width="200px" height="100px">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <img src="assets/images/wave.png" alt="" srcset="" width="200px" height="90px">
 =======
                         <img src="assets/simages/wave.png" alt="" srcset="" width="200px" height="90px">
 >>>>>>> 17dbc5ba943871263574d751b627960c4e6d1ae6
+=======
+                        <img src="assets/simages/wave.png" alt="" srcset="" width="200px" height="90px">
+=======
+                        <img src="assets/images/wave.png" alt="" srcset="" width="200px" height="90px">
+>>>>>>> 83dc7adc94ef24d1e05035d0f605873b268bd085
+>>>>>>> 4927c5d255cb0965a22230d2c0311a814295f1be
                         <img src="assets/images/sama.jpg" alt="" srcset="" width="200px" height="90px">
                     </section>
                 </div>
@@ -238,14 +281,24 @@
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         
 =======
+=======
+>>>>>>> 4927c5d255cb0965a22230d2c0311a814295f1be
         <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.12.1/js/dataTables.dataTables.min.js"></script>
 
+<<<<<<< HEAD
 >>>>>>> 17dbc5ba943871263574d751b627960c4e6d1ae6
+=======
+=======
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        
+>>>>>>> 83dc7adc94ef24d1e05035d0f605873b268bd085
+>>>>>>> 4927c5d255cb0965a22230d2c0311a814295f1be
                 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

@@ -116,10 +116,18 @@
         <section class="i-name" style="display: flex;">
 
         </section>
+<<<<<<< HEAD
         
 
         
         <script src="assets/bootstrap/bootstrap.min.js"></script>
+=======
+<<<<<<< HEAD
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+=======
+        <script src="assets/bootstrap/bootstrap.min.js"></script>
+>>>>>>> 83dc7adc94ef24d1e05035d0f605873b268bd085
+>>>>>>> 4927c5d255cb0965a22230d2c0311a814295f1be
 
     </body>
 </html>

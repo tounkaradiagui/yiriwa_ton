@@ -90,7 +90,15 @@ include "connect.php";
 
             <button type="submit" class="btn  btnn" onclick="location.href='#'" style="color: #fff;">       <i class="fa-solid fa-pen-to-square"></i> Publication</i></button>
 
+<<<<<<< HEAD
             <button type="submit" class="btn btn-warning ehhh" onclick="location.href='hist.php'"> <i class="fa-solid fa-list"></i> Historique</i></button>
+=======
+<<<<<<< HEAD
+            <button type="submit" class="btn btn-warning ehhh" onclick="location.href='hist.php'"> <i class="fa-solid fa-list"></i> Historique</i></button>
+=======
+            <button type="submit" class="btn  ehhh btnn" onclick="location.href='#'" style="color: #fff;"> <i class="fa-solid fa-list"></i> Historique</i></button>
+>>>>>>> 83dc7adc94ef24d1e05035d0f605873b268bd085
+>>>>>>> 4927c5d255cb0965a22230d2c0311a814295f1be
           
         </section>
 

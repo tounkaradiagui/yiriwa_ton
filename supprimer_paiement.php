@@ -2,25 +2,25 @@
 
         include "connect.php";
 
-        if (isset($_POST['deletedata']))
+        if (isset($_POST['supprimer']))
 
 
-        $id = $_POST['deleteid'];
+        $id = $_POST['code_membre'];
 
 
         try {
             $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $query = "DELETE FROM membres WHERE code_mb='$id'";
+            $query = "DELETE FROM historique WHERE code_membre='$id'";
             $connection->exec($query);
             
-            echo "Le membre a été supprimé de la liste";
+            echo "Paiement supprimé de la liste";
           }
           
         catch (PDOException $e) {
             echo $query . "<br>" . $e->getMessage();
           }
           
-          $connection = null;
+          $conn = null;
 
 ?>

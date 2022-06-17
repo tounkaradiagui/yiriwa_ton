@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *
 {
     margin: 0;
@@ -73,3 +74,25 @@ i{
     position: relative;
     left: -30px;
 }
+=======
+/* .monlogo{
+    position: relative;
+    left: -60px;
+}
+
+
+.fa{
+    margin: 5px;
+    cursor: pointer;
+}
+
+.eye{
+    position: absolute;
+}
+#hide1{
+    display: none;
+}
+#mask1{
+    display: none;
+} */
+>>>>>>> 17dbc5ba943871263574d751b627960c4e6d1ae6

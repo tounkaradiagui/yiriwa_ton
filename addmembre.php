@@ -1,5 +1,3 @@
-
-
 <?php
     include "connect.php";
     if(isset($_POST['savedata']))
@@ -16,11 +14,11 @@
 
 
         try {
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             $query = "INSERT INTO membres (code_mb,civilite,nom,prenom,numero,adresse,role,login,password) 
             VALUES ('$code_mb','$sexe', '$nom', '$prenom',  '$numero', '$adresse', '$role', '$login', '$password')";
-            $conn->exec($query);
+            $connection->exec($query);
             
             echo "Votre enregistrement a été pris en compte";
           }
@@ -29,6 +27,6 @@
             echo $query . "<br>" . $e->getMessage();
           }
           
-          $conn = null;
+          $connection = null;
        
 ?>

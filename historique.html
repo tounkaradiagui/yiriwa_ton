@@ -1,0 +1,47 @@
+<div class="modal fade" id="contact" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #0E4C92; color: #f79423">
+          <h5 class="modal-title" id="exampleModalLabel">Contact</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form method="POST" action="laison.php">
+        <div class="modal-body">
+          <legend>Veuiller remplir les champs</legend>
+          <div class="row">
+            <div class="col">
+              <label>Nom</label>
+            </div>
+            <div class="col">
+              <input type="text" name="nom" required>
+            </div>
+          </div><br>
+          <div class="row">
+            <div class="col">
+              <label>Prénom</label>
+            </div>
+            <div class="col">
+              <input type="text" name="prenom" required>
+            </div>
+          </div><br>
+          <div class="row">
+            <div class="col">
+              <label>Téléphone</label>
+            </div>
+            <div class="col">
+              <input type="text" name="telephone" required>
+            </div>
+          </div><br>
+          <label>Objet</label><br>
+          <input type="texte" name="objet" required><br>
+          <label>Message</label><br>
+          <textarea name="message" required></textarea><br>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn" data-dismiss="modal" style="background-color: #0E4C92; color: #fff">Annuler</button>
+            <button type="submit" name="envoyer" class="btn" style="background-color: #F79423; color: #fff">Envoyer</button>
+        </div>
+      </form> 
+      </div>
+    </div>
+  </div>

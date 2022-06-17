@@ -1,5 +1,5 @@
 body {
-    height: 770px;
+    overflow: hidden;
 }
 .row {
     margin-top: 100px;

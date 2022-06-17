@@ -1,11 +1,12 @@
 <?php
-session_start();
+
+    session_start();
     require_once 'connect.php';
     $connection = mysqli_connect("localhost", "root", "");
     $db = mysqli_select_db($connection, 'yiriwaton');
 
 
-    if($_SERVER['REQUEST_METHOD'] == "POST")
+    if($_POST['REQUEST_METHODE'] == "POST")
     {
         $user = $_POST["username"];
         $password = $_POST["password"];
@@ -14,7 +15,6 @@ session_start();
 
         $sql ="SELECT login, password, role FROM membres WHERE login='".$user."' AND role = '".$role."' AND password = '".$password."' ";
         $result = mysqli_query($connection, $sql);
-        $row = mysqli_fetch_array($result);
 
         $_SESSION['login'] = $user;
         if($row["role"] == "admin")
@@ -28,14 +28,7 @@ session_start();
         }
 
         else{
-            
-
             $message = "login or password incorrect";
-
-            
-            $_SESSION['loginMessage'] = $message;
-
-            header("location:login.php");
         }
 
     }
@@ -73,13 +66,6 @@ session_start();
                         <div class="card shadow">
                             <div class="card-header" style="background-color: #F79423;">
                                 <h5>Renseignez les champs pour vous connecter</h5>
-                                <h6>
-                                    <?php 
-                                    // session_start();
-                                        echo $_SESSION['loginMessage'];
-
-                                    ?>
-                                </h6>
                             </div>
                             <div class="card-body">
         

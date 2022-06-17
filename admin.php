@@ -1,5 +1,10 @@
 
+<?php
 
+session_start();
+include "connect.php";
+
+?>
 
 
 <!DOCTYPE html>
@@ -10,8 +15,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/bootstrap-icons/bootstrap-icons.css">
+        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
         <link rel="stylesheet" href="assets/css/admin.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -40,7 +45,7 @@
 
         
 
-        <div class="side" style="background-color: #D9D9D9; width: 200px; height: 600px;">
+        <div class="side" style="background-color: #D9D9D9; width: 200px; height: 690px;">
 
         
 
@@ -56,7 +61,7 @@
                     
                 </div>
                 <!-- <a class="nav-link" href="logout.php">Log out</a> -->
-            <a type="submit" class="btn btn-primary pied" href="login.php" >Déconnexion</a>
+            <a type="submit" class="btn btn-primary pied" href="logout.php" >Déconnexion</a>
 
             
                 
@@ -87,13 +92,13 @@
 
             <button type="submit" class="btn btn-warning" onclick="location.href='#'">       <i class="fa-solid fa-pen-to-square"></i> Publication</i></button>
 
-            <button type="submit" class="btn btn-warning ehhh" onclick="location.href='#'"> <i class="fa-solid fa-list"></i> Historique</i></button>
+            <button type="submit" class="btn btn-warning ehhh" onclick="location.href='hist.php'"> <i class="fa-solid fa-list"></i> Historique</i></button>
           
         </section>
 
 
 
-        <script src="assets/bootstrap/css/bootstrap.min.css"></script>
+        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     </body>
 </html>

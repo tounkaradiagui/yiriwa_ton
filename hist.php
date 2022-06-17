@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>La table des membres</title>
-        <link rel="stylesheet" href="assets/css/membres.css">
+        <title>Historique des paiements</title>
+        <link rel="stylesheet" href="assets/css/hist.css">
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         
 
@@ -26,73 +26,55 @@
             <div class="modal-content">
 
                 <div class="modal-header" style="background-color: #0E4C92;">
-                    <h4 class="modal-title" id="form" style="color: #fff;">Ajouter un membre</h4>
+                    <h4 class="modal-title" id="form" style="color: #fff;">Ajouter un paiement</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 
-                <form action="addmembre.php" method="POST">
+                <form action="liaison_hist.php" method="POST">
 
                     <div class="modal-body">
 
                         <div class="form-group">
                             <label>Code membre<em>*</em></label>
-                            <input type="text" name="code_mb" id="" class="form-control" placeholder="Attribuer un code" required>
+                            <input type="text" name="code_membre" id="" class="form-control" required>
                         </div><br>
 
-                        <div class="form-group">
-                            <label> Civilité<em>*</em> </label>
-                                <select id="" required name="sexe">
-                                    <option value="" >choisir</option>
-                                    <option value="Mr" >Mr</option>
-                                    <option value="Mme" >Mme</option>
-                                    <option value="Mlle" >Mlle</option>
-                                </select>         
-                        </div>
 
                         <div class="form-group">
                             <label>Nom<em>*</em></label>
-                            <input type="text" name="nom" id="" class="form-control" placeholder="Saisir le nom" required>
+                            <input type="text" name="nom" id="" class="form-control" required>
                         </div><br>
 
                         <div class="form-group">
                             <label> Prénom<em>*</em> </label>
-                            <input type="text" name="prenom" id="" class="form-control" placeholder="Saisir le prénom" required> 
+                            <input type="text" name="prenom" id="" class="form-control" required> 
                         </div><br>
 
                         <div class="form-group">
-                            <label >Numéro <em>*</em></label>
-                            <input type="text" name="numero" id="" class="form-control" placeholder="Saisir le numéro de téléphone" required> 
+                            <label >Téléphone <em>*</em></label>
+                            <input type="text" name="telephone" id="" class="form-control" required> 
                         </div><br>
 
                         <div class="form-group">
                             <label >Adresse <em>*</em></label>
-                            <input type="text" name="adresse" id="" class="form-control" placeholder="Saisir l'adresse" required> 
+                            <input type="text" name="adresse" id="" class="form-control" required> 
                         </div><br>
 
                         <div class="form-group">
-                            <label >Rôle <em>*</em></label>
-                            <select name="role" id="">
-                                <option value="choisir">Choisir</option>
-                                <option value="admin"  >admin</option>
-                                <option value="user"  >user</option>
-                            </select> 
+                            <label>Mode de paiement <em>*</em></label>
+                            <input type="text" name="mode_de_paiement" id="" class="form-control" required> 
                         </div><br>
 
                         <div class="form-group">
-                            <label >Login <em>*</em></label>
-                            <input type="text" name="login" id="" class="form-control" placeholder="Saisir le login" required> 
-                        </div><br>
-
-                        <div class="form-group">
-                            <label >Password <em>*</em></label>
-                            <input type="password" name="password" id="" class="form-control" placeholder="Saisir le mot de passe" required> 
+                            <label >Montant <em>*</em></label>
+                            <input type="text" name="montant" id="" class="form-control" required> 
                         </div>
                     
                     </div>
 
                     <div class="modal-footer">
                         <button type="button" class="btn" data-bs-dismiss="modal" style="background-color: #0E4C92; color: #fff;">Annuler</button>
-                        <button type="submit" name="savedata" class="btn" style="background-color: #f79423; color: #fff;">Enregistrer</button>
+                        <button type="submit" name="enregistrer" class="btn" style="background-color: #f79423; color: #fff;">Enregistrer</button>
                     </div>
 
                 </form>
@@ -116,11 +98,11 @@
         <div class="modal-content">
 
             <div class="modal-header" style="background-color: #0E4C92;">
-                <h4 class="modal-title" id="form" style="color: #fff;">Ajouter un membre</h4>
+                <h4 class="modal-title" id="form" style="color: #fff;">Ajouter un paiement</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             
-            <form action="modify_mb.php" method="POST">
+            <form action="modifier_paiement.php" method="POST">
 
                 <div class="modal-body">
 
@@ -128,63 +110,44 @@
 
                     <div class="form-group">
                         <label>Code membre<em>*</em></label>
-                        <input type="text" name="code_mb" id="code_mb" class="form-control" placeholder="Attribuer un code" required>
+                        <input type="text" name="code_membre" id="code_membre" class="form-control" required>
                     </div><br>
 
                     <div class="form-group">
-                        <label> Civilité<em>*</em> </label>
-                            <select id="sexe" required name="sexe">
-                                <option value="" >choisir</option>
-                                <option value="Mr" >Mr</option>
-                                <option value="Mme" >Mme</option>
-                                <option value="Mlle" >Mlle</option>
-                            </select>         
-                    </div>
-
-                    <div class="form-group">
                         <label>Nom<em>*</em></label>
-                        <input type="text" name="nom" id="nom" class="form-control" placeholder="Saisir le nom" required>
+                        <input type="text" name="nom" id="nom" class="form-control" required>
                     </div><br>
 
                     <div class="form-group">
                         <label> Prénom<em>*</em> </label>
-                        <input type="text" name="prenom" id="prenom" class="form-control" placeholder="Saisir le prénom" required> 
+                        <input type="text" name="prenom" id="prenom" class="form-control" required> 
                     </div><br>
 
                     <div class="form-group">
-                        <label >Numéro <em>*</em></label>
-                        <input type="text" name="numero" id="numero" class="form-control" placeholder="Saisir le numéro de téléphone" required> 
+                        <label>Téléphone<em>*</em></label>
+                        <input type="text" name="telephone" id="telephone" class="form-control" required> 
                     </div><br>
 
                     <div class="form-group">
                         <label >Adresse <em>*</em></label>
-                        <input type="text" name="adresse" id="adresse" class="form-control" placeholder="Saisir l'adresse" required> 
+                        <input type="text" name="adresse" id="adresse" class="form-control" required> 
                     </div><br>
 
                     <div class="form-group">
-                        <label >Rôle <em>*</em></label>
-                        <select name="role" id="role">
-                            <option value="choisir">Choisir</option>
-                            <option value="admin"  >admin</option>
-                            <option value="user"  >user</option>
-                        </select> 
+                        <label >Mode de paiement <em>*</em></label>
+                        <input type="text" name="mode_de_paiement" id="mode_de_paiement" class="form-control" required> 
                     </div><br>
 
                     <div class="form-group">
-                        <label >Login <em>*</em></label>
-                        <input type="text" name="login" id="login" class="form-control" placeholder="Saisir le login" required> 
-                    </div><br>
-
-                    <div class="form-group">
-                        <label >Password <em>*</em></label>
-                        <input type="password" name="password" id="password" class="form-control" placeholder="Saisir le mot de passe" required> 
+                        <label >Montant <em>*</em></label>
+                        <input type="text" name="montant" id="montant" class="form-control" required>
                     </div>
                 
                 </div>
 
                 <div class="modal-footer">
                     <button type="button" class="btn" data-bs-dismiss="modal" style="background-color: #0E4C92; color: #fff;">Annuler</button>
-                    <button type="submit" name="majdata" class="btn" style="background-color: #f79423; color: #fff;">Enregistrer</button>
+                    <button type="submit" name="modifier" class="btn" style="background-color: #f79423; color: #fff;">Enregistrer</button>
                 </div>
 
             </form>
@@ -212,7 +175,7 @@
                     </button>
                 </div>
 
-                <form action="deletecode.php" method="POST">
+                <form action="supprimer_paiement.php" method="POST">
 
                     <div class="modal-body">
 
@@ -223,7 +186,7 @@
 
                     <div class="modal-footer">
                         <button type="button" style="margin-right: 110px;" class="btn btn-danger" data-bs-dismiss="modal">Non</button>
-                        <button type="submit" style="margin-right: 80px;" name="deletedata" class="btn btn-primary" >Oui</button>
+                        <button type="submit" style="margin-right: 80px;" name="supprimer" class="btn btn-primary" >Oui</button>
                     </div>
 
                 </form>
@@ -258,17 +221,17 @@
         <div class="container i-name" style=" width: 85%;">
 
             <div class="row text-center mt-5">
-                <h2>La table des membres Yiriwa Ton</h2>
+                <h2>Historique de paiement Yiriwa Ton</h2>
             </div>
             <div class="row">
                 <div class="col" >
 
                 <?php
 
-                    $connection = mysqli_connect("localhost", "root", "root");
+                    $connection = mysqli_connect("localhost", "root", "");
                     $db = mysqli_select_db($connection, 'yiriwaton');
 
-                    $query = "SELECT * FROM membres";
+                    $query = "SELECT * FROM historique";
                     $query_run = mysqli_query($connection, $query);
                 ?>
 
@@ -278,12 +241,12 @@
                         <thead  class="text-center">
                             <tr>
                                 <th scope="col">Code membre</th>
-                                <th scope="col">Civilité</th>
                                 <th scope="col">Nom</th>
                                 <th scope="col">Prénom</th>
-                                <th scope="col">Numéro</th>
+                                <th scope="col">Téléphone</th>
                                 <th scope="col">Adresse</th>
-                                <th scope="col">Role</th>
+                                <th scope="col">Mode de paiement</th>
+                                <th scope="col">Montant</th>
                                 <th colspan="2">Action</th>
                             </tr>
                         </thead>
@@ -299,13 +262,13 @@
                     ?>
                           <tbody>
                             <tr>
-                                <td><?php echo $row ['code_mb'];?></th>
-                                <td><?php echo $row ['civilite'];?></th>
+                                <td><?php echo $row ['code_membre'];?></th>
                                 <td><?php echo $row ['nom'];?></th>
                                 <td><?php echo $row ['prenom'];?></th>
-                                <td><?php echo $row ['numero'];?></th>
+                                <td><?php echo $row ['telephone'];?></th>
                                 <td><?php echo $row ['adresse'];?></th>
-                                <td><?php echo $row ['role'];?></th>
+                                <td><?php echo $row ['mode_de_paiement'];?></th>
+                                <td><?php echo $row ['montant'];?></th>
                                 <td> <button type="button" class="btn editbtn"  style=" background-color:#0E4C92; color:#fff" >Modifier</button> </td>
                                 <td><button type="button"  class="btn  deletebtn" style=" background-color:#f79423; color:#fff ">Suprimer</button></td>
                             </tr>
@@ -384,13 +347,13 @@
 
     console.log(data);
 
-    $('#code_mb').val(data[0]);
-    $('#civilite').val(data[1]);
+    $('#code_membre').val(data[0]);
     $('#nom').val(data[2]);
     $('#prenom').val(data[3]);
-    $('#numero').val(data[4]);
+    $('#telephone').val(data[4]);
     $('#adresse').val(data[5]);
-    $('#role').val(data[6]);
+    $('#mode_de_paiement').val(data[6]);
+    $('#montant').val(data[7]);
 
     });
     });

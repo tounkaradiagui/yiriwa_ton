@@ -2,62 +2,29 @@
 
 <?php
 
-    if($_SERVER['REQUEST_METHOD'] == 'POST')
-    
-    {
-
    
         include 'connect.php'; 
 
         $mode = $_POST['mode'];
         $numero = $_POST['numero'];
         $montant = $_POST['montant'];
+    try{
 
+    
         $query = "INSERT INTO cotisation (Mode_de_paiement, Numéro, Montant) VALUES ('$mode', '$numero', '$montant')";
-        $result=mysqli_query($conn, $query);
+        $connection->exec($query);
         
-        
-        if($result)
-            
-        {
-            echo "Paiement effectué";
-        }
-        else
-        {
-            die(mysqli_error($con));
-        }
+         echo "Connected successfully";
 
-//         $sql="SELECT * FROM registration WHERE username='$username'";
-//         $result=mysqli_query($con, $sql);
-        
-//         if($result){
-//             $num=mysqli_num_rows($result);
-//             if($num>0){
-//                 echo "User already exist";
 
-//                 // $user=1;
-//             }
-//             else
-//             {
-//                 $sql="INSERT INTO cotisation (username, password) VALUES ('$username', '$password')";
-
-//                 $result=mysqli_query($con, $sql);
-
-//                 if($result)
-            
-//             {
-//                 echo "signup  successfully";
-//                 // $user=1;
-
-//                 header('location:cotisation.php');
-//             }
-//             else
-//             {
-//                 die(mysqli_error($con));
-//             }
-//             }
-//         }
+       } 
+    
+    catch (PDOException $e)
+  
+    {
+      echo "Connection failed: " . $e->getMessage();
     }
+  
 
 ?>
 
@@ -136,13 +103,13 @@
         </div>
     </div>
 
-    <!-- Findu modal d'ajout -->
+    <!-- Fin du modal d'ajout -->
 
         <section class="interface" style="background-color: #0E4C92;">
 
             <nav class="navbar" >
 
-                <img src="images/Logo.png" width="100" height="90" alt="">
+                <img src="assets/images/logo.png" width="100" height="90" alt="">
                 <h1 style="color: #fff;">Yiriwa Ton</h1>
                 <button type="submit" class="btn droite" data-bs-toggle="modal" data-bs-target="#cotiser"  style="background-color: #f79423; color: #fff;">Cotiser</button>
 
@@ -204,7 +171,7 @@
 
                 <div class="col-md-4">
                     <section id="warrri">
-                        <img src="images/wari.jpg" alt="" srcset="" width="400px" height="400px">
+                        <img src="assets/images/wari.jpg" alt="" srcset="" width="400px" height="400px">
                     </section>
                 </div>
                 
@@ -216,19 +183,17 @@
             <div class="row last">
                 <div class="col">
                     <section style="display: flex;">
-                        <img src="images/OrangeMoney.jpg" alt="" srcset="" width="200px" height="90px">
-                        <img src="images/movv.png" alt="" srcset="" width="200px" height="100px">
-                        <img src="images/wave.png" alt="" srcset="" width="200px" height="90px">
-                        <img src="images/sama.jpg" alt="" srcset="" width="200px" height="90px">
+                        <img src="assets/images/OrangeMoney.jpg" alt="" srcset="" width="200px" height="90px">
+                        <img src="assets/images/movv.png" alt="" srcset="" width="200px" height="100px">
+                        <img src="assets/images/wave.png" alt="" srcset="" width="200px" height="90px">
+                        <img src="assets/images/sama.jpg" alt="" srcset="" width="200px" height="90px">
                     </section>
                 </div>
             </div>
         </div>
 
-        <script src="bootstrap/bootstrap.min.js"></script>
-        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.12.1/js/dataTables.dataTables.min.js"></script>
-
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        
                 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

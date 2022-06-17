@@ -36,7 +36,7 @@
 
                         <div class="form-group">
                             <label>Code membre<em>*</em></label>
-                            <input type="text" name="code_mb" id="" class="form-control" placeholder="Attribuer un code" required>
+                            <input type="text" name="code_mb" id="code_mb" class="form-control" placeholder="Attribuer un code" required>
                         </div><br>
 
                         <div class="form-group">
@@ -71,10 +71,10 @@
 
                         <div class="form-group">
                             <label >Rôle <em>*</em></label>
-                            <select name="role" id="">
+                            <select name="role" id="role">
                                 <option value="choisir">Choisir</option>
-                                <option value="admin"  >admin</option>
-                                <option value="user"  >user</option>
+                                <option value="admin"   >admin</option>
+                                <option value="user"   >user</option>
                             </select> 
                         </div><br>
 
@@ -102,7 +102,7 @@
 
     <!-- Findu modal d'ajout -->
 
-<!-- ################################################################################################################################################## -->
+    <!-- ################################################################################################################################################## -->
 
 
 
@@ -120,15 +120,15 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             
-            <form action="modify_mb.php" method="POST">
+            <form action="mofifymb.php" method="POST">
 
                 <div class="modal-body">
 
-                
+                <input type="" name="name" id="name">
 
                     <div class="form-group">
                         <label>Code membre<em>*</em></label>
-                        <input type="text" name="code_mb" id="code_mb" class="form-control" placeholder="Attribuer un code" required>
+                        <input type="hidden" name="name" id="name" class="form-control" placeholder="Attribuer un code" required>
                     </div><br>
 
                     <div class="form-group">
@@ -207,8 +207,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Suppression</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" >&times;</span>
                     </button>
                 </div>
 
@@ -216,13 +216,13 @@
 
                     <div class="modal-body">
 
-                    <input type="hidden" name="deleteid" id="deleteid">
+                        <input type="hidden" name="delete_id" id="delete_id">
 
                         <h6>Voulez-vous vraiment supprimer cette ligne?</h6>
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" style="margin-right: 110px;" class="btn btn-danger" data-bs-dismiss="modal">Non</button>
+                        <button type="button" style="margin-right: 110px;" class="btn btn-danger" data-dismiss="modal">Non</button>
                         <button type="submit" style="margin-right: 80px;" name="deletedata" class="btn btn-primary" >Oui</button>
                     </div>
 
@@ -239,7 +239,7 @@
 
             <nav class="navbar" >
 
-                <img src="images/Logo.png" width="100" height="90" alt="">
+                <img src="assets/images/Logo.png" width="100" height="90" alt="">
                 <h1 style="color: #fff;">Yiriwa Ton</h1>
                 <button class="btn boutonsdpl" data-bs-toggle="modal" data-bs-target="#ajouter" style="background-color: #f79423; color: #fff;">Ajouter</button>
     
@@ -356,7 +356,7 @@
 
             console.log(data);
 
-            $('#deleteid').val(data[0]);
+            $('#delete_id').val(data[0]);
 
                  });
                 
@@ -390,7 +390,7 @@
     $('#prenom').val(data[3]);
     $('#numero').val(data[4]);
     $('#adresse').val(data[5]);
-    $('#role').val(data[6]);
+    $('#roles').val(data[6]);
 
     });
     });

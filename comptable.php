@@ -11,10 +11,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" href="css/comptable.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/comptable.css">
 
-        <link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+        <link rel="stylesheet" href="assets/bootstrap-icons/bootstrap-icons.css">
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -81,7 +81,7 @@
 
         <div class="side" style="background-color: #D9D9D9; width: 200px; height: 600px;">
 
-            <img src="images/profile-user.png" alt="" width="80px" height="80px" class="profil">
+            <img src="assets/images/profile-user.png" alt="" width="80px" height="80px" class="profil">
             <h6>Madalo DIALL</h1>
             <h6>En ligne</h6>
                 <div class="para">
@@ -118,7 +118,7 @@
             <button type="submit" class="btn btn-warning " style="width: 210px;" > <i class="bi bi-list-check"></i> Historique</button>
           
         </section>
-        <script src="bootstrap/bootstrap.min.js"></script>
+        <script src="assets/bootstrap/bootstrap.min.js"></script>
 
     </body>
 </html>

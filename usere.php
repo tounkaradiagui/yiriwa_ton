@@ -2,9 +2,9 @@
 session_start();
 include "connect.php";
 
-
-
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -21,7 +21,7 @@ include "connect.php";
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <title>
-            
+            Dashbord user
         </title>
 
     </head>
@@ -70,9 +70,11 @@ include "connect.php";
 
         <section class="i-name" style="display: flex;">
 
-            <button type="submit" class="btn btnn" onclick="location.href='membres.php'" style="color: #fff;"> <i class="fa-solid fa-users"></i> Membres</button>
-
-            <button type="submit" class="btn btnn ehhh" onclick="location.href='cotisation.php'" style="color: #fff;"> <i class="fa-solid fa-hand-holding-dollar"></i> Cotisation</button>
+            
+            <button type="submit" class="btn btnn" onclick="location.href='cotisation.php'" style="color: #fff;"> <i class="fa-solid fa-hand-holding-dollar"></i> Cotisation</button>
+            
+            <button type="submit" class="btn btnn ehhh" onclick="location.href='#'" style="color: #fff;">    <i class="bi bi-info-circle-fill"></i> Actualités</button>
+          
           
         </section>
 
@@ -80,19 +82,14 @@ include "connect.php";
 
             <button type="submit" class="btn btnn" onclick="location.href='Webinaire.php'" style="color: #fff;" > <i class="fa-solid fa-video"></i> Webinaire</button>
 
-            <button type="submit" class="btn ehhh btnn" onclick="location.href='#'" style="color: #fff;">    <i class="bi bi-info-circle-fill"></i> Actualités</button>
+            <button type="submit" class="btn btnn ehhh" onclick="location.href='#'" style="color: #fff;"> <i class="fa-solid fa-list"></i> Historique</i></button>
           
+
         </section>
 
         
 
-        <section class="i-name" style="display: flex;">
-
-            <button type="submit" class="btn  btnn" onclick="location.href='#'" style="color: #fff;">       <i class="fa-solid fa-pen-to-square"></i> Publication</i></button>
-
-            <button type="submit" class="btn  ehhh btnn" onclick="location.href='#'" style="color: #fff;"> <i class="fa-solid fa-list"></i> Historique</i></button>
-          
-        </section>
+    
 
 
 

@@ -28,7 +28,7 @@ session_start();
         }
 
         else{
-            session_start();
+            
 
             $message = "login or password incorrect";
 
@@ -76,7 +76,7 @@ session_start();
                                 <h6>
                                     <?php 
                                     // session_start();
-                                    //     echo $_SESSION['loginMessage'];
+                                        echo $_SESSION['loginMessage'];
 
                                     ?>
                                 </h6>

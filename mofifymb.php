@@ -4,9 +4,9 @@
 
         if (isset($_POST['majdata']))
    
-        $code_mb = $_POST['code_mb'];
+        $code_mb = $_POST['name'];
 
-        $code_mb = $_POST['code_mb'];
+        
         $sexe = $_POST['sexe'];
         $nom = $_POST['nom'];
         $prenom = $_POST['prenom'];
@@ -14,13 +14,11 @@
         $adresse = $_POST['adresse'];
         $role = $_POST['role'];
        
-
-
         try {
             $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             $query = "UPDATE membres SET civilite='$sexe', nom='$nom', prenom='$prenom', 
-            numero='$numero', adresse='$adresse', role='$role'  WHERE code_mb=$code_mb";
+            numero='$numero', adresse='$adresse', role='$role' WHERE nom=$code_mb";
             $connection->exec($query);
             
             echo "Votre enregistrement a été pris en compte";

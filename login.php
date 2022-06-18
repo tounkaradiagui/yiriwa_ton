@@ -1,6 +1,6 @@
 <?php
 session_start();
-    require_once 'connect.php';
+    include "connect.php";
     $connection = mysqli_connect("localhost", "root", "");
     $db = mysqli_select_db($connection, 'yiriwaton');
 
@@ -11,20 +11,22 @@ session_start();
         $password = $_POST["password"];
         $role = $_POST["role"];
 
-
         $sql ="SELECT login, password, role FROM membres WHERE login='".$user."' AND role = '".$role."' AND password = '".$password."' ";
         $result = mysqli_query($connection, $sql);
         $row = mysqli_fetch_array($result);
 
         $_SESSION['login'] = $user;
-        if($row["role"] == "admin")
-        {
-            header("Location: admin.php ");
-        }
-        elseif($row["role"] == "user")
 
+        if($row["role"] == "user")
         {
-            header("Location : user.php");
+           
+            header("Location:usere.php");
+        }
+
+        elseif($row["role"] == "admin")
+        {
+           
+            header("Location:admin.php");
         }
 
         else{
@@ -32,10 +34,6 @@ session_start();
 
             $message = "login or password incorrect";
 
-            
-            $_SESSION['loginMessage'] = $message;
-
-            header("location:login.php");
         }
 
     }
@@ -73,13 +71,7 @@ session_start();
                         <div class="card shadow">
                             <div class="card-header" style="background-color: #F79423;">
                                 <h5>Renseignez les champs pour vous connecter</h5>
-                                <h6>
-                                    <?php 
-                                    // session_start();
-                                        echo $_SESSION['loginMessage'];
-
-                                    ?>
-                                </h6>
+                                <h6>Bonjour</h6>
                             </div>
                             <div class="card-body">
         
@@ -88,17 +80,17 @@ session_start();
                                     <div class="form-group mb-3">
                                         <label for="">Adresse Email</label>
                                         
-                                        <input type="text" name="username" id="" class="form-control">
+                                        <input type="text" name="username" id="username" class="form-control">
                                         
                                     </div>
                                     <div class="form-group mb-3">
                                         <label for="">Mot de passe</label>
                                         
-                                        <input type="password" name="password" id="" class="form-control">
+                                        <input type="password" name="password" id="password" class="form-control">
                                        
                                     </div><br>
                                     <div class="form-group mb-3">
-                                        <select name="role" id="" class="form-select mb-3 box-input" aria-label="Default select example">
+                                        <select name="role" id="role" class="form-select mb-3 box-input" aria-label="Default select example">
                                             <option selected value="user">user</option>
                                             <option value="admin">admin</option>
                                         </select>
@@ -117,51 +109,6 @@ session_start();
         </div>
         
     <script src="assets/bootstrap/js/bootstrap.min.js" ></script>
-
-
-    <script>
-        // function myFunction(){
-        //                 var x = document.getElementById("moninput");
-        //                 var y = document.getElementById("mask1");
-        //                 var z = document.getElementById("mask2");
-            
-        //                 if(x.type === "text"){
-        //                     x.type="text";
-        //                     y.style.display='block';
-        //                     z.style.display="none";
-            
-        //                     }
-        //                     else{
-        //                         x.type="text";
-        //                         y.style.display='none';
-        //                         z.style.display="block";
-            
-        //                 }
-                 
-        //                 }
-            
-        //               function myFunction(){
-        //                 var x = document.getElementsById("moinput");
-        //                 var y = document.getElementsById("hide1");
-        //                 var z = document.getElementsById("hide2");
-            
-        //                 if(x.type === "password"){
-        //                     x.type="text";
-        //                     y.style.display='block';
-        //                     z.style.display="none";
-            
-        //                     }
-        //                     else{
-        //                         x.type="password";
-        //                         y.style.display='none';
-        //                         z.style.display="block";
-            
-        //                 }
-            
-        //                 }
-        
-    </script>
-
 
     </body>
 </html>

@@ -81,7 +81,7 @@
 
         <div class="side" style="background-color: #D9D9D9; width: 200px; height: 600px;">
 
-            <img src="images/profile-user.png" alt="" width="80px" height="80px" class="profil">
+            <img src="assets/images/profile-user.png" alt="" width="80px" height="80px" class="profil">
             <h6>Madalo DIALL</h1>
             <h6>En ligne</h6>
                 <div class="para">
@@ -116,7 +116,11 @@
         <section class="i-name" style="display: flex;">
 
         </section>
+<<<<<<< HEAD
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+=======
+        <script src="assets/bootstrap/bootstrap.min.js"></script>
+>>>>>>> 83dc7adc94ef24d1e05035d0f605873b268bd085
 
     </body>
 </html>
